@@ -1,0 +1,111 @@
+/* frontend/src/pages/AddBook.css */
+
+/* Container */
+.add-book-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdf5f7; /* soft background */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* Heading */
+.add-book-container h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #f03e5f;
+  margin-bottom: 20px;
+}
+
+/* Message */
+.message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f03e5f;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: #d83553;
+}
+
+/* Form */
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.add-book-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Inputs and textarea */
+.add-book-form input,
+.add-book-form select,
+.add-book-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Submit button */
+.add-book-form button[type="submit"] {
+  background-color: #f03e5f;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(240, 62, 95, 0.5);
+  margin-top: 10px;
+}
+
+.add-book-form button[type="submit"]:hover {
+  background-color: #d83553;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-book-container {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .add-book-container h2 {
+    font-size: 28px;
+  }
+}
+.back-home-button {
+  background-color: #ff91c2; /* cute pink */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.back-home-button:hover {
+  background-color: #ff5ea2; /* darker pink on hover */
+  transform: translateY(-2px) scale(1.05); /* small lift + scale */
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}

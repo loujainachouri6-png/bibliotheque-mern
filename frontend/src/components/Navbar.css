@@ -1,0 +1,95 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* centrer le contenu */
+  align-items: center;
+  gap: 50px;
+  background: linear-gradient(90deg, #f03e5f, #ff7e91); /* fond coloré */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 0 0 15px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode navbar */
+.home.dark .navbar {
+  background: linear-gradient(90deg, #222, #444);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff; /* texte clair sur fond coloré */
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #ffd1dc;
+}
+
+/* ===== BRAND ===== */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand .logo {
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.brand .logo:hover {
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(90deg, #f03e5f, #ff7e91);
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .home.dark .nav-links {
+    background: linear-gradient(90deg, #222, #444);
+  }
+}

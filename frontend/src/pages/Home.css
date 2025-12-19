@@ -1,0 +1,159 @@
+/* ================== THEME ================== */
+.home.light {
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.home.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  background-color: #f03e5f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #d93652;
+  transform: scale(1.05);
+}
+
+/* ================== HOME ================== */
+.home {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================== PROMO BANNER ================== */
+.promo-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #f03e5f, #ff7e91);
+  color: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(240,62,95,0.35);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  transition: all 0.4s ease;
+}
+
+.home.dark .promo-banner {
+  background: linear-gradient(135deg, #1e1e1e, #333);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.promo-text {
+  max-width: 600px;
+}
+
+.promo-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.promo-text p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+}
+
+.promo-image img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.promo-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ================== MANAGEMENT LINKS ================== */
+.management-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  margin: 40px auto;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home.dark .management-links {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.management-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  background-color: #f03e5f;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.management-link:hover {
+  background-color: #d93652;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ================== GLOBAL ================== */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .promo-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .promo-image img {
+    max-width: 250px;
+    margin-top: 20px;
+  }
+
+  .promo-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .promo-text p {
+    font-size: 1.1rem;
+  }
+}
